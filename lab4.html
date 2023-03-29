@@ -16,6 +16,20 @@
             height: 250px;
             overflow-y: auto;
             overflow-x: hidden;
+            position: relative;
+            background: linear-gradient(#ccd, #ddf);
+            z-index: 2;
+        }
+        .second {
+            left: 380px;
+            top: 120px;
+            position: fixed;
+            transition: 500ms;
+            z-index: 1;
+        }
+        .second:hover{
+            z-index: 3;
+
         }
     </style>
 </head>
@@ -32,7 +46,7 @@
         Ведь технология – всего лишь метод действия или способ производства чего-либо.
         </div>
 
-        <div>
+        <div class="second">
         Конечно, тут много деталей, но для базового понимания финансовый инструмент удобно представлять как инженерный инструмент или объект. Это не сложнее, 
         чем представить, зачем нужен циркуль, ящик или, например, железнодорожный мост.
         </div>
