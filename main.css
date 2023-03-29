@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(to right bottom,red, orange, yellow, green, lightblue, blue,purple);
+    background: linear-gradient(to right bottom,red, orange, yellow, green, lightblue, blue,purple);
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
@@ -29,6 +29,9 @@ footer {
     font-size: 16pt;
     text-align: right;
     transition: 1s;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer:active {
