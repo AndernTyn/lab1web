@@ -24,6 +24,32 @@
             let author = 'Привет мой друг!'
             alert(author);
         }
+        function showMinus() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a-b
+            alert(a + ' минус ' + b + ' равно ' + result)
+        }
+        
+        function showDel() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a/b
+            alert(a + ' делить на ' + b + ' равно ' + result)
+        }
+
+        function showUmn() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a*b
+            alert(a + ' умножить на ' + b + ' равно ' + result)
+        }
     </script>
     <style>
         .massage {
@@ -41,8 +67,6 @@
     </style>
 </head>
 
-
-
 <body>
     <header>
         НГТУ, ФБ, Лабораторная работа 5
@@ -52,8 +76,11 @@
         <label>Первое число: <input type="number" value="5154" id="numberA"><br></label>
         <label>Второе чилсо: <input type="number" value="7891" id="numberB"><br></label>
         <div class="massage" onclick="showSum()">Найти сумму чисел</div>
-
         <div class="massage" onclick="showAuthor()">Узнать, кто автор страницы</div>
+        <div class="massage" onclick="showMinus()">Разница чисел</div>
+        <div class="massage" onclick="showUmn()">Умножение</div>
+        <div class="massage" onclick="showDel()">Деление</div>
+
     </main>
 
     <footer onclick="showPod()">
