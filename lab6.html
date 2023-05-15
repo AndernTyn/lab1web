@@ -40,6 +40,22 @@
         text-align: center;
 
         }
+
+        #moving-block {
+            position: absolute;
+            left: 0;
+            transform: translateX(0%);
+            transition: all 2s ease-out;
+            background-color: aquamarine;
+            width: 150px;
+            height: 150px;
+            margin-top: 30px;
+            text-align: center;
+            line-height: 150px;
+            cursor: pointer;
+            border: 2px solid green;
+            border-radius: 10%;
+        }
     </style>
 
     <script>
@@ -105,28 +121,51 @@
             if (div.style.backgroundColor == 'yellow') {
                 div.style.backgroundColor = 'red';
                 document.getElementById('color-name').innerHTML = 'красный';
+            }
+            else if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'черный';
+            }
+            else if (div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'pink';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'розовый';
+            }
+            else if (div.style.backgroundColor == 'pink') {
+                div.style.backgroundColor = 'green';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'зеленый';
+            }
+            else {
+                div.style.backgroundColor = 'yellow';
+                document.getElementById('color-name').innerHTML = 'желтый';
+                div.style.color = 'black'
+            }
         }
-        else if (div.style.backgroundColor == 'red') {
-            div.style.backgroundColor = 'black';
-            div.style.color = 'white';
-            document.getElementById('color-name').innerHTML = 'черный';
+
+       function moveBlock() {
+            let block = document.getElementById("moving-block");
+            if (block.style.left == "0px") {
+            block.style.transform = "rotate(4turn)";
+            block.style.left = "calc(100% - 153px)";
+
+            } else {
+            block.style.left = "0";
+            block.style.transform = "rotate(0)";
+            }
         }
-        else if (div.style.backgroundColor == 'black') {
-            div.style.backgroundColor = 'pink';
-            div.style.color = 'black';
-            document.getElementById('color-name').innerHTML = 'розовый';
+
+        function increaseWidth() {
+            const block = document.getElementById("myBlock");
+            const currentWidth = parseInt(block.style.width);
+            const newWidth = currentWidth + 50;
+            if (newWidth <= 1000) {
+            block.style.width = newWidth + "px";
+            } else {
+            block.style.width = "100px";
+            }
         }
-        else if (div.style.backgroundColor == 'pink') {
-            div.style.backgroundColor = 'green';
-            div.style.color = 'white';
-            document.getElementById('color-name').innerHTML = 'зеленый';
-        }
-        else {
-            div.style.backgroundColor = 'yellow';
-            document.getElementById('color-name').innerHTML = 'желтый';
-            div.style.color = 'black'
-        }
-    }
     </script>
 </head>
 
@@ -182,6 +221,10 @@
         <div class="color" ondblclick="changecolor(this)">
             Цвет: <span id="color-name">желтый</span><br>
             Сделайте двойной щелчок, чтобы сменить.
+        </div>
+
+        <div id="moving-block" onclick="moveBlock()">
+            Щёлкни меня
         </div>
     </main>
 
