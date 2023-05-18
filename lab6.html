@@ -20,24 +20,24 @@
         }
 
         .rules {
-        background-color: aliceblue;
-        color: brown;
-        border-radius: 20px;
-        width: 900px;
-        padding: 10px;
-        margin: 40px auto;
-        font-weight: bold;
+            background-color: aliceblue;
+            color: brown;
+            border-radius: 20px;
+            width: 900px;
+            padding: 10px;
+            margin: 40px auto;
+            font-weight: bold;
 
         }
 
         .color {
-        background-color: yellow;
-        border: 2px solid;
-        border-radius: 20px;
-        width: 250px;
-        padding: 10px;
-        margin: 40px auto;
-        text-align: center;
+            background-color: yellow;
+            border: 2px solid;
+            border-radius: 20px;
+            width: 250px;
+            padding: 10px;
+            margin: 40px auto;
+            text-align: center;
 
         }
 
@@ -161,12 +161,12 @@
        function moveBlock() {
             let block = document.getElementById("moving-block");
             if (block.style.left == "0px") {
-            block.style.transform = "rotate(4turn)";
-            block.style.left = "calc(100% - 153px)";
+                block.style.transform = "rotate(4turn)";
+                block.style.left = "calc(100% - 153px)";
 
             } else {
-            block.style.left = "0";
-            block.style.transform = "rotate(0)";
+                block.style.left = "0";
+                block.style.transform = "rotate(0)";
             }
         }
 
@@ -175,9 +175,9 @@
             const currentWidth = parseInt(block.style.width);
             const newWidth = currentWidth + 50;
             if (newWidth <= 1000) {
-            block.style.width = newWidth + "px";
+                block.style.width = newWidth + "px";
             } else {
-            block.style.width = "100px";
+                block.style.width = "100px";
             }
         }
 
@@ -292,9 +292,9 @@
 
             Тип одежды:
             <select id="wear-type">
-            <option>Футболка</option>
-            <option>Поло</option>
-            <option>Майка</option>
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
             </select>
 
         </div>
